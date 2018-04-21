@@ -1,0 +1,75 @@
+/*Play button*/
+#songPlay{
+
+}
+/*Pause button*/
+#songPause{
+
+}
+/*Stop button*/
+#songStop{
+
+}
+/*Play/Pause button*/
+#songPlayPause{
+
+}
+/*Song location slider*/
+#songSlider{
+    width: 500px;
+    height: 3px;
+    background-color: blue;
+}
+/*Track progress bar*/
+#trackProgress{
+    width: 0px;
+    height: 3px;
+    background-color: red;
+}
+/*Volume Up Button*/
+#volumeUp{
+
+}
+/*Volume Down Button*/
+#volumeDown{
+
+}
+/*Volume Meter*/
+#volumeMeter{
+    width: 500px;
+    height: 10px;
+    background-color: black;
+}
+/*Volume Location Meter*/
+#volumeStatus{
+    height: 10px;
+    background-color: green;
+}
+/* nav bar styling */
+#barnav li{
+  display: inline;
+  padding-right: 10px;
+
+
+}
+#barnav{
+  background-color:#dddddd;
+}
+
+
+a{
+  text-decoration: none;
+  color: green;
+}
+
+
+
+/* search box design */
+input[type=text] {
+    background-color: white;
+    background-image: url('/images/searchicon.png');
+    width: 90%;
+    background-repeat: no-repeat;
+
+    border-radius: 7px;
+}

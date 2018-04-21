@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/playerstyle.css' />
+    <script type="text/javascript" src="javascripts/control.js"> </script>
+  </head>
+  <body>
+
+    <!-- this is the navigation bar -->
+    <ul id="barnav">
+
+      <li><a href="/">Home</a></li>
+      <li><a href="#player">Player</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li style="float:right"><a class="active" href="#about">About</a></li>
+    </ul>
+
+    <!--
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  -->
+
+    <form method="GET" action="/player">
+      <input type="text" name="nsong"/>
+      <input type="submit" value="search" />
+
+    <p>song name <%= songname %> </p>
+    </form>
+    <audio id="song" ontimeupdate="updateTime()" preload="auto">
+        <source src="/musics/<%= songname %>.mp3" type="audio/mp3"/>
+    </audio>
+    <div id="player">
+        <button id="songPlay" onclick="play('song')">Play</button>
+
+        <button id="songPause" onclick="pause()">Pause</Button>
+
+
+        <button id="songPlayPause" onclick="playPause('song')">PlayPause</button>
+
+
+        <button id="songStop" onclick="stopSong()">Stop</button>
+
+
+        <div id="songTime">0:00 / 0:00</div>
+        <button id="volumeUp" onclick="changeVolume(10, 'up')">Plus</div><br>
+        <button id="volumeDown" onclick="changeVolume(10, 'down')">Minus</button>
+
+
+        <div id="volumeMeter" onclick="setNewVolume(this,event)"><div id="volumeStatus"></div></div>
+        <span id="volumeThirty" onclick="volumeUpdate(30)">VOLUME 30</span>
+        <span id="volumeSixty" onclick="volumeUpdate(60)">VOLUME 60</span>
+        <span id="volumeNinety" onclick="volumeUpdate(90)">VOLUME 90</span>
+
+        <div id="songSlider" onclick="setSongPosition(this,event)"><div id="trackProgress"></div></div>
+
+
+
+    </div>
+  </body>
+</html>
