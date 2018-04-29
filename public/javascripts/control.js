@@ -1,4 +1,7 @@
-alert('javascripts is linked');
+
+// $('.song').onclick(function(this){
+//   this.title
+// });
 
 
 var activeSong;
@@ -96,6 +99,8 @@ function setVolume(percentage){
 
     document.getElementById('volumeStatus').style.width = Math.round(percentageOfVolumeSlider) + "px";
 }
+
+
 
 //Set's new volume id based off of the click on the volume bar.
 function setNewVolume(obj,e){

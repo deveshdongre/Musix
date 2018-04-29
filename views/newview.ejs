@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title> Plyer layout </title>
+  <link rel='stylesheet' href='/stylesheets/newview.css' />
+  <script type="text/javascript" src="javascripts/control.js"></script>
+</head>
+<body>
+
+    <div class="container">
+      <div class="header">
+        <ul id="navbar">
+          <li><a href="/">Home</a></li>
+          <li><a href="/player">Player</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li style="float:right"><a class="active" href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <form method="GET" action="/newview">
+          <input type="text" name="nsong"/>
+          <input type="submit" value="search" /><br>
+
+        main<br>main<br>main<br>main<br>main<br>main<br>
+        main<br>main<br>main<br>main<br>main<br>main<br>
+        main<br>main<br>main<br>main<br>main<br>main<br>
+        main<br>main<br>main<br>main<br>main<br>main<br>
+        main<br>main<br>main<br>main<br>main<br>main<br>
+        main<br>main<br>main<br>main<br>main<br>main<br>
+      </div>
+
+       <div class="footer">
+         <audio id="song" ontimeupdate="updateTime()" preload="auto" >
+             <source src="/musics/<%= songname %>.mp3" type="audio/mp3"/>
+         </audio>
+         <div id="songSlider" onclick="setSongPosition(this,event)"><div id="trackProgress"></div></div>
+
+         <button id="songPlay" onclick="play('song')">Play</button>
+       </div>
+    </div>
+
+</body>
+</html>

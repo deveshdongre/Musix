@@ -16,10 +16,7 @@
       <li style="float:right"><a class="active" href="#about">About</a></li>
     </ul>
 
-    <!--
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  -->
+
 
     <form method="GET" action="/player">
       <input type="text" name="nsong"/>
@@ -27,8 +24,8 @@
 
     <p>song name <%= songname %> </p>
     </form>
-    <audio id="song" ontimeupdate="updateTime()" preload="auto">
-        <source src="/musics/<%= songname %>.mp3" type="audio/mp3"/>
+    <audio id="song" ontimeupdate="updateTime()" preload="auto" >
+        <source src="/musics/<%= songname %>.mp3" type="audio/mp3" />
     </audio>
     <div id="player">
         <button id="songPlay" onclick="play('song')">Play</button>
@@ -48,10 +45,16 @@
 
 
         <div id="volumeMeter" onclick="setNewVolume(this,event)"><div id="volumeStatus"></div></div>
+
+
+        <!-- direct setting the volume
         <span id="volumeThirty" onclick="volumeUpdate(30)">VOLUME 30</span>
         <span id="volumeSixty" onclick="volumeUpdate(60)">VOLUME 60</span>
         <span id="volumeNinety" onclick="volumeUpdate(90)">VOLUME 90</span>
+          -->
 
+
+          <br>
         <div id="songSlider" onclick="setSongPosition(this,event)"><div id="trackProgress"></div></div>
 
 
